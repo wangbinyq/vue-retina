@@ -1,4 +1,4 @@
-## Retinajs Binding Of Vue
+## Retinajs Binding of Vue
 
 ### Install
 
