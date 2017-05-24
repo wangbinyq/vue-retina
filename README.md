@@ -13,6 +13,7 @@ npm install uglifyjs-webpack-plugin --save-dev
 ```
 
 ### Usage
+[expample](https://wangbinyq.github.io/vue-retina/test/)
 
 ```js
 import Vue from 'vue/dist/vue.common.js'
