@@ -2,7 +2,7 @@ let retina
 
 const directive = {
   inserted (el, binding) {
-    el.dataset.rjs = binding.value
+    el.dataset.rjs = binding.value || 2
     if (retina) {
       retina([el])
     }
@@ -12,7 +12,7 @@ const directive = {
     const oldSrc = vnode.data.attrs && oldVnode.data.attrs.src
     if (binding.value !== binding.oldValue 
       || newSrc !== oldSrc) {
-      el.dataset.rjs = binding.value
+      el.dataset.rjs = binding.value || 2
       el.removeAttribute('data-rjs-processed')
       if (retina) {
         retina([el])

@@ -1,6 +1,6 @@
 {
   "name": "vue-retina",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "a retinajs binding of vue2",
   "main": "./dist/vue-retina.js",
   "keywords": [
