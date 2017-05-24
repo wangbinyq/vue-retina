@@ -5,7 +5,7 @@
   "main": "./dist/vue-retina.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imulus/retinajs.git"
+    "url": "https://github.com/wangbinyq/vue-retina"
   },
   "scripts": {
     "test": "webpack --config webpack.test.config.js",
