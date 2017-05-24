@@ -1,8 +1,12 @@
 {
   "name": "vue-retina",
-  "version": "0.0.1",
-  "description": "an retinajs binding of vue2",
+  "version": "0.1.1",
+  "description": "a retinajs binding of vue2",
   "main": "./dist/vue-retina.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imulus/retinajs.git"
+  },
   "scripts": {
     "test": "webpack --config webpack.test.config.js",
     "build": "webpack"

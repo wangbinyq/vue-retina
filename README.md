@@ -27,7 +27,7 @@ Vue.use(VueRetina, {retina})
 ```
 
 ### Todo
-[ ] deal size not match when src changed
+- [ ] deal size not match when src changed
 
 ### License
 MIT
