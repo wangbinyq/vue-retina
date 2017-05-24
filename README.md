@@ -4,12 +4,12 @@
 
 With [Yarn](https://yarnpkg.com):
 ```bash
-yarn add vue-retina --dev
+yarn add vue-retina
 ```
 
 With npm:
 ```bash
-npm install vue-retina --save-dev
+npm install vue-retina --save
 ```
 
 ### Usage
