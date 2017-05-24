@@ -4,12 +4,12 @@
 
 With [Yarn](https://yarnpkg.com):
 ```bash
-yarn add uglifyjs-webpack-plugin --dev
+yarn add vue-retina --dev
 ```
 
 With npm:
 ```bash
-npm install uglifyjs-webpack-plugin --save-dev
+npm install vue-retina --save-dev
 ```
 
 ### Usage
