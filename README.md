@@ -18,7 +18,7 @@ npm install vue-retina --save
 ```js
 import Vue from 'vue/dist/vue.common.js'
 import retina from 'retinajs'
-import VueRetina from '../src/index'
+import VueRetina from 'vue-retina'
 
 Vue.use(VueRetina, {retina})
 ```
