@@ -28,7 +28,7 @@ Vue.use(VueRetina, {retina})
 ```
 
 ### Todo
-- [ ] deal size not match when src changed
+- [ ] change image size properly when image src is changed
 
 ### License
 MIT
