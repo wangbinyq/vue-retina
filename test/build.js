@@ -75,7 +75,7 @@ var retina = void 0;
 
 var directive = {
   inserted: function inserted(el, binding) {
-    el.dataset.rjs = binding.value;
+    el.setAttribute('data-rjs', binding.value || 2);
     if (retina) {
       retina([el]);
     }
@@ -84,7 +84,7 @@ var directive = {
     var newSrc = vnode.data.attrs && vnode.data.attrs.src;
     var oldSrc = vnode.data.attrs && oldVnode.data.attrs.src;
     if (binding.value !== binding.oldValue || newSrc !== oldSrc) {
-      el.dataset.rjs = binding.value;
+      el.setAttribute('data-rjs', binding.value || 2);
       el.removeAttribute('data-rjs-processed');
       if (retina) {
         retina([el]);
