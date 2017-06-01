@@ -13,7 +13,7 @@ npm install vue-retina --save
 ```
 
 ### Usage
-[expample](https://wangbinyq.github.io/vue-retina/test/)
+[example](https://wangbinyq.github.io/vue-retina/test/)
 
 ```js
 import Vue from 'vue/dist/vue.common.js'
