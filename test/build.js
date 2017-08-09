@@ -76,9 +76,6 @@ var retina = void 0;
 var directive = {
   inserted: function inserted(el, binding) {
     el.setAttribute('data-rjs', binding.value || 2);
-    if (retina) {
-      retina([el]);
-    }
   },
   update: function update(el, binding, vnode, oldVnode) {
     var newSrc = vnode.data.attrs && vnode.data.attrs.src;
@@ -87,8 +84,19 @@ var directive = {
       el.setAttribute('data-rjs', binding.value || 2);
       el.removeAttribute('data-rjs-processed');
       if (retina) {
-        retina([el]);
+        if (el._onload) {
+          el.removeEventListener('load', el._onload);
+        }
+        el._onload = function () {
+          return retina([el]);
+        };
+        el.addEventListener('load', el._onload);
       }
+    }
+  },
+  unbind: function unbind(el) {
+    if (el._onload) {
+      el.removeEventListener('load', el._onload);
     }
   }
 };

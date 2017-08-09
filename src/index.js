@@ -3,9 +3,6 @@ let retina
 const directive = {
   inserted (el, binding) {
     el.setAttribute('data-rjs', binding.value || 2)
-    if (retina) {
-      retina([el])
-    }
   },
   update (el, binding, vnode, oldVnode) {
     const newSrc = vnode.data.attrs && vnode.data.attrs.src
@@ -15,8 +12,18 @@ const directive = {
       el.setAttribute('data-rjs', binding.value || 2)
       el.removeAttribute('data-rjs-processed')
       if (retina) {
-        retina([el])
+        if (el._onload) {
+          el.removeEventListener('load', el._onload)
+        }
+        el._onload = () => retina([el])
+        el.addEventListener('load', el._onload) 
       }
+    }
+  },
+
+  unbind (el) {
+    if (el._onload) {
+      el.removeEventListener('load', el._onload)
     }
   }
 }
