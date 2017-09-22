@@ -1,8 +1,8 @@
 let retina
 
-function setupRetina (el, binding, vnode, oldValue) {
+function setupRetina (el, binding, vnode, oldVnode) {
     const newSrc = vnode ? (vnode.data.attrs && vnode.data.attrs.src) : 0
-    const oldSrc = oldValue ? (oldValue.data.attrs && oldVnode.data.attrs.src) : 1
+    const oldSrc = oldVnode ? (oldVnode.data.attrs && oldVnode.data.attrs.src) : 1
     if (binding.value !== binding.oldValue 
       || newSrc !== oldSrc) {
       el.setAttribute('data-rjs', binding.value || 2)
