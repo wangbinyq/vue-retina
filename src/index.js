@@ -1,12 +1,8 @@
 let retina
 
-const directive = {
-  inserted (el, binding) {
-    el.setAttribute('data-rjs', binding.value || 2)
-  },
-  update (el, binding, vnode, oldVnode) {
-    const newSrc = vnode.data.attrs && vnode.data.attrs.src
-    const oldSrc = vnode.data.attrs && oldVnode.data.attrs.src
+function setupRetina (el, binding, vnode, oldValue) {
+    const newSrc = vnode ? (vnode.data.attrs && vnode.data.attrs.src) : 0
+    const oldSrc = oldValue ? (oldValue.data.attrs && oldVnode.data.attrs.src) : 1
     if (binding.value !== binding.oldValue 
       || newSrc !== oldSrc) {
       el.setAttribute('data-rjs', binding.value || 2)
@@ -19,6 +15,14 @@ const directive = {
         el.addEventListener('load', el._onload) 
       }
     }
+}
+
+const directive = {
+  inserted (el, binding) {
+    setupRetina(el, binding)
+  },
+  update (el, binding, vnode, oldVnode) {
+    setupRetina(el, binding, vnode, oldVnode)
   },
 
   unbind (el) {

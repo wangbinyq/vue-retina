@@ -11,8 +11,5 @@ new Vue({
     img: 'google-logo.png'
   },
   mounted () {
-    setInterval(() => {
-      this.img = this.img === 'ipad.png' ? 'google-logo.png' : 'ipad.png'
-    }, 5 * 1000)
   }
 })
